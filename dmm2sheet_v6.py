@@ -5,11 +5,11 @@ from google.oauth2.service_account import Credentials
 import urllib.parse
 
 # 設定 Google Sheets API 認證
-SERVICE_ACCOUNT_FILE = 'D:/VisualStudioCode/DMM2Sheet/dmm-scrapying-ca95a23a4216.json'  # 憑證文件路徑
+SERVICE_ACCOUNT_FILE = 'file path'  # 憑證文件路徑
 
 credentials = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE)
 client = pygsheets.authorize(service_account_file=SERVICE_ACCOUNT_FILE)
-spreadsheet_id = '1CSJW28pvLHj9w3L1fiJhZp3opGdHLPdq1EdhqwaqIzs'
+spreadsheet_id = 'target sheet ID'
 sh = client.open_by_key(spreadsheet_id)
 
 # 年齡認證
